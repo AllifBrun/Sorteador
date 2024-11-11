@@ -34,3 +34,13 @@
         }
     }
 }
+
+
+
+@media (width >=80rem){
+
+    #info{
+        position: absolute;
+        top: 160px;
+    }
+}

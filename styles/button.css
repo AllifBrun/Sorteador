@@ -1,6 +1,6 @@
-form{
+form {
 
-    button{
+    button {
         position: relative;
         margin-top: 2.5rem;
 
@@ -20,12 +20,12 @@ form{
 
         font: var(--label-md);
         color: white;
-        
 
-     
+
+
     }
 
-    button::before{
+    button::before {
         content: "";
         border-radius: .5rem;
         width: 320px;
@@ -37,53 +37,77 @@ form{
         top: -1px;
         left: -1px;
         opacity: 0;
-        
+
     }
 
-    button:hover{
-        
-        & svg{
-    
-                animation: botao 2s ease infinite;
-            
+    button:hover {
+
+        & svg {
+
+            animation: botao 2s ease infinite;
+
         }
 
-        &::before{
+        &::before {
             opacity: 1;
             animation: border 1s ease infinite;
         }
 
-    } 
+    }
 
 
 }
 
 @keyframes botao {
-    50%{
+    50% {
         transform: translateX(1rem);
     }
-    100%{
+
+    100% {
         transform: translateX(0);
     }
 }
 
 @keyframes border {
 
-    0%{
+    0% {
         background: linear-gradient(0deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
     }
-    25%{
+
+    25% {
         background: linear-gradient(45deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
     }
 
-    50%{
+    50% {
         background: linear-gradient(90deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
     }
-    75%{
-    background: linear-gradient(180deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
- }
 
- 100%{
-    background: linear-gradient(0deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
- }
+    75% {
+        background: linear-gradient(180deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+    }
+
+    100% {
+        background: linear-gradient(0deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+    }
+}
+
+
+
+
+@media (width >=80) {
+
+    form {
+
+        button {
+            width: 482px;
+        }
+
+
+        button::before {
+            content: "";
+            border-radius: .5rem;
+            width: 484px;
+            height: 58px;
+        }
+    }
 }

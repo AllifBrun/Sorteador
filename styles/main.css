@@ -4,7 +4,8 @@ body {
 
 #app {
     width: 100%;
-    max-width: 24.375rem;
+    max-width: 80rem;
+    overflow: visible;
 }
 
 header {
@@ -39,7 +40,7 @@ header {
 main {
     padding-inline: 2.25rem;
     width: 100%;
-    max-width: 20rem;
+    max-width: 80rem;
 
     & .title {
         display: flex;
@@ -98,11 +99,7 @@ main {
 
     }
 
-    #app {
-        width: 100%;
-        max-width: 85.375rem;
-
-    }
+  
 
 
     header {
@@ -132,7 +129,7 @@ main {
         margin-inline: 8.375rem;
 
         width: 100%;
-        max-width: 32rem;
+        max-width: 80rem;
 
         & .title {
             display: flex;
@@ -176,4 +173,10 @@ main {
             & p {}
         }
     }
+}
+
+@media (width >= 80){
+
+
+  
 }
