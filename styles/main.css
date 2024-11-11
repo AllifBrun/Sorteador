@@ -3,7 +3,7 @@ body {
     overflow: hidden;
 }
 
-#app{
+#app {
     width: 100%;
     max-width: 24.375rem;
 }
@@ -38,154 +38,333 @@ header {
 
 
 main {
-   padding-inline: 2.25rem;
+    padding-inline: 2.25rem;
     width: 100%;
     max-width: 20rem;
+
     & .title {
         display: flex;
         flex-direction: column;
         margin-bottom: 2.625rem;
 
-        & .h3{
+        & .h3 {
             background: linear-gradient(90deg,
-                var(--content-secondary), var(--background-gray));
-                background-clip: text;
-                -webkit-background-clip: text;
-                gap: .5rem;
+                    var(--content-secondary), var(--background-gray));
+            background-clip: text;
+            -webkit-background-clip: text;
+            gap: .5rem;
 
             & h3 {
-                
+
                 font: var(--overline);
                 color: transparent;
                 text-transform: uppercase;
             }
         }
-            
-       
-
-            & h1{
 
 
-                color: var(--content-primary);
-                font: var(--display-md);
-                text-transform: uppercase;
 
-            }
+        & h1 {
 
-      
+
+            color: var(--content-primary);
+            font: var(--display-md);
+            text-transform: uppercase;
+
+        }
+
+
 
 
     }
 
-    & .info{
-        & h2{
+    & .sort {
+        & h2 {
             font: 700 1.25rem/150% var(--roboto-flex);
             color: var(--content-primary)
         }
 
-        & p{
+        & p {
             font: var(--paragraph-md);
             color: var(--content-tertiary);
         }
+
+
+
+        & form {
+            margin-top: 2.5rem;
+
+            .switch {
+                margin-top: 1.25rem;
+                display: block;
+
+                & label {
+
+                    display: block;
+                    position: relative;
+                    width: 30px;
+                    height: 20px;
+                    background-color: var(--content-tertiary);
+                    border-radius: 1rem;
+
+
+                }
+
+                label::before {
+                    content: "";
+                    width: .875rem;
+                    height: .875rem;
+                    border-radius: 100%;
+                    background-color: var(--content-primary);
+                    top: 3px;
+                    left: 3px;
+                    z-index: 2;
+                    position: absolute;
+                }
+
+                & input {
+                    width: 1px;
+                    height: 1px;
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                }
+
+                & input:checked+label{
+                    background: linear-gradient(90deg, #D586E0 0%, #91A1FA 98.93%);
+                }
+
+                & input:checked+label::before {
+                    animation: switch 400ms ease forwards;
+                }
+
+                input:not(:checked)+label::before {
+                    animation: unswitch 400ms ease forwards;
+                }
+            }
+
+
+
+
+            & fieldset {
+                display: flex;
+                justify-content: left;
+                gap: .75rem;
+                border-color: transparent;
+                position: relative;
+
+                .input-item:hover {
+
+                    & label {
+                        color: #C58DE7;
+
+                    }
+
+                    .teste::after {
+                        width: 88px;
+                        height: 58px;
+                    }
+
+                }
+
+                .input-item {
+                    display: flex;
+                    flex-direction: column;
+                    gap: .5rem;
+                    align-items: center;
+
+                    .teste {
+                        position: relative;
+                        width: fit-content;
+                        height: fit-content;
+
+                        &::after {
+                            z-index: 1;
+                            position: absolute;
+                            content: "";
+                            width: 0px;
+                            border-radius: .5rem;
+                            height: 0px;
+
+
+                            top: -1px;
+                            right: -1px;
+                            background: var(--gradient-border);
+                        }
+
+                    }
+
+
+
+                    & label {
+                        font: var(--label-md);
+                        color: var(--content-secondary);
+
+                    }
+
+
+                }
+
+
+                input {
+                    font: 800 2rem/150% var(--sora);
+
+                    &:focus {
+                        outline: none;
+                        box-shadow: none;
+                    }
+
+                    position: relative;
+                    width: 86px;
+                    height: 56px;
+                    background-color: var(--background-secondary);
+                    color: white;
+                    border-radius: .5rem;
+                    border-color: none;
+                    border: 0;
+
+                    z-index: 5;
+
+                }
+
+
+
+
+            }
+
+            &:hover {
+
+                & label {
+                    color: #C58DE7;
+
+                }
+            }
+
+        }
+    }
+}
+
+@keyframes switch {
+    80%{
+        transform: translateX(12px);
+    }
+
+    100%{
+        transform: translateX(10px);
+
+    }
+}
+
+@keyframes unswitch {
+
+    0%{
+        transform: translateX(10px);
+
+    }
+
+    80%{
+        transform: translateX(-2px);
+    }
+
+    100%{
+        transform: translateX(0px);
+
     }
 }
 
 
 
-@media(width >= 80rem){
-    *{
+
+
+@media(width >=80rem) {
+    * {
         margin-inline: 0;
     }
 
-    body{
+    body {
         width: 100%;
         display: flex;
         justify-content: center;
-        
+
 
     }
 
-    #app{
+    #app {
         width: 100%;
-        max-width: 85.375rem; 
-        
+        max-width: 85.375rem;
+
     }
 
 
-    header{
+    header {
         justify-content: left;
         margin-inline: 7.5rem;
         margin-top: 4.75rem;
         margin-bottom: 5.56rem;
-   
+
 
         & div {
             margin-inline: 0;
             display: flex;
             gap: .8125rem;
-    
+
             & svg {
                 width: 2.125rem;
                 height: 2.125rem;
-    
-            }
-    
 
-        }     
+            }
+
+
+        }
     }
 
 
     main {
         margin-inline: 8.375rem;
-       
-         width: 100%;
-         max-width: 32rem;
-         & .title {
-             display: flex;
-             flex-direction: column;
-             gap: .875rem;
-     
-             & .h3{
-                 background: linear-gradient(90deg,
-                     var(--content-secondary), var(--background-gray));
-                     background-clip: text;
-                     -webkit-background-clip: text;
-                     gap: .5rem;
-     
-                 & h3 {
-                     
-                     font: var(--overline);
-                     color: transparent;
-                     text-transform: uppercase;
-                 }
-             }
-                 
-            
-     
-                 & h1{
-     
-     
-                     color: var(--content-primary);
-                     font: var(--display-lg);
-                     text-transform: uppercase;
-     
-                 }
-     
-           
-     
-     
-         }
-     
-         & .info{
-             & h2{
-     
-     
-             }
-     
-             & p{
-     
-     
-             }
-         }
-     }
+
+        width: 100%;
+        max-width: 32rem;
+
+        & .title {
+            display: flex;
+            flex-direction: column;
+            gap: .875rem;
+
+            & .h3 {
+                background: linear-gradient(90deg,
+                        var(--content-secondary), var(--background-gray));
+                background-clip: text;
+                -webkit-background-clip: text;
+                gap: .5rem;
+
+                & h3 {
+
+                    font: var(--overline);
+                    color: transparent;
+                    text-transform: uppercase;
+                }
+            }
+
+
+
+            & h1 {
+
+
+                color: var(--content-primary);
+                font: var(--display-lg);
+                text-transform: uppercase;
+
+            }
+
+
+
+
+        }
+
+        & .sort {
+            & h2 {}
+
+            & p {}
+        }
+    }
 }
