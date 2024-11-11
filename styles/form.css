@@ -1,0 +1,132 @@
+main{
+
+
+
+& .sort {
+    & h2 {
+        font: 700 1.25rem/150% var(--roboto-flex);
+        color: var(--content-primary)
+    }
+
+    & p {
+        font: var(--paragraph-md);
+        color: var(--content-tertiary);
+    }
+
+
+
+    & form {
+        margin-top: 2.5rem;
+
+
+        & fieldset {
+            display: flex;
+            justify-content: left;
+            gap: .75rem;
+            border-color: transparent;
+            position: relative;
+
+            .input-item:hover {
+
+                & label {
+                    color: #C58DE7;
+
+                }
+
+                .teste::after {
+                    width: 88px;
+                    height: 58px;
+                }
+
+            }
+
+            .input-item {
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+                align-items: center;
+
+                .teste {
+                    position: relative;
+                    width: fit-content;
+                    height: fit-content;
+
+                    &::after {
+                        z-index: 1;
+                        position: absolute;
+                        content: "";
+                        width: 0px;
+                        border-radius: .5rem;
+                        height: 0px;
+
+
+                        top: -1px;
+                        right: -1px;
+                        background: var(--gradient-border);
+                    }
+
+                }
+
+
+
+                & label {
+                    font: var(--label-md);
+                    color: var(--content-secondary);
+
+                }
+
+
+            }
+
+
+            input {
+                font: 800 2rem/150% var(--sora);
+
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+
+                position: relative;
+                width: 86px;
+                height: 56px;
+                background-color: var(--background-secondary);
+                color: white;
+                border-radius: .5rem;
+                border-color: none;
+                border: 0;
+
+                z-index: 5;
+
+            }
+
+
+
+
+        }
+
+        &:hover {
+
+            & label {
+                color: #C58DE7;
+
+            }
+        }
+
+    }
+}
+}
+
+
+@media (width >= 80rem){
+
+main{
+   & .sort{
+
+    & p{
+            font: var(--paragraph-lg);
+        }
+    }
+}
+
+}

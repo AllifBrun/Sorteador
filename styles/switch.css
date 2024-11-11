@@ -1,0 +1,89 @@
+& form {
+
+    .switch {
+        margin-top: 1.25rem;
+        display: block;
+        position: relative;
+
+        & label {
+
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 20px;
+            background-color: var(--content-tertiary);
+            border-radius: 1rem;
+
+
+        }
+
+        label::before {
+            content: "";
+            width: .875rem;
+            height: .875rem;
+            border-radius: 100%;
+            background-color: var(--content-primary);
+            top: 3px;
+            left: 3px;
+            z-index: 2;
+            position: absolute;
+        }
+
+        & input {
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+        }
+
+        & input:checked+label{
+            background: linear-gradient(90deg, #D586E0 0%, #91A1FA 98.93%);
+        }
+
+        & input:checked+label::before {
+            animation: switch 400ms ease forwards;
+        }
+
+        input:not(:checked)+label::before {
+            animation: unswitch 400ms ease forwards;
+        }
+
+        span{
+            color: white;
+            font: var(--paragraph-md);
+            position: absolute;
+            top: 0;
+            left: 2.5rem;
+        }
+    }
+}
+
+
+@keyframes switch {
+    80%{
+        transform: translateX(12px);
+    }
+
+    100%{
+        transform: translateX(10px);
+
+    }
+}
+
+@keyframes unswitch {
+
+    0%{
+        transform: translateX(10px);
+
+    }
+
+    80%{
+        transform: translateX(-2px);
+    }
+
+    100%{
+        transform: translateX(0px);
+
+    }
+}
