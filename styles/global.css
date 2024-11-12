@@ -49,3 +49,7 @@
 
 
 }
+
+body{
+    max-width: 85rem;
+}

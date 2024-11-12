@@ -82,7 +82,7 @@ main {
 
                 input {
                     font: 800 2rem/150% var(--sora);
-
+                    padding-left: 1rem;
                     &:focus {
                         outline: none;
                         box-shadow: none;
@@ -125,16 +125,16 @@ main {
         position: relative;
         & .sort {
             position: absolute;
-            right: 170px;
+            right: 200px;
             top: 36px;
             & p {
                 font: var(--paragraph-lg);
-                max-width: 482px;
+                width: 482px;
             }
 
 
             & h2 {
-                max-width: 482px;
+                width: 482px;
             }
         }
     }
