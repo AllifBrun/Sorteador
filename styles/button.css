@@ -183,6 +183,9 @@ form {
 
     #novamente {
         width: 482px;
+
+
+        
     }
 
 
@@ -196,3 +199,16 @@ form {
 
 }
 
+@media(width < 80rem){
+ #novamente{
+    & svg:nth-child(1){
+        position: absolute;
+         right: 64px;
+     }
+ }
+   .play{
+    position: absolute;
+    right: 1000px;
+   }
+
+}
