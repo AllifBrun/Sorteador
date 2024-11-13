@@ -137,7 +137,17 @@ checkbox.addEventListener("change", ()=>{
 function teste(){
     novamente.style.display = "flex"
     sorteio.classList.add("subir")
-    sorteio.style.top = "25%"
+    let largura = sorteio.offsetWidth
+    if(largura <=400){
+        sorteio.style.top = "40%"
+
+    }else{
+
+        sorteio.style.top = "25%"
+    }
+
+    console.log(largura)
+
     console.log("executado")
 
     novamente.addEventListener("click", ()=>{

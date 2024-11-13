@@ -144,9 +144,8 @@
 
         width: 319px;
         height: 359px;
+        top: 400px;
 
-
-        position: relative;
         width: 319px;
         margin-left: 25px;
 
@@ -169,4 +168,23 @@
         }
     }
 }
+
+
+#sorteio .subir{
+    top: 380px;
+}
+
+
+@keyframes subir2 {
+
+    100%{
+        top: 380px !important;
+    }
+}
+
+
+
+
+
+
 }

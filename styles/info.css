@@ -1,6 +1,7 @@
 #info{
     margin-top: 5rem;
-
+    position: absolute;
+    top: 630px;
     display: flex;
     flex-direction: column;
     gap: 2.25rem;
@@ -55,9 +56,9 @@
 
 
 
-    .controle{
+    main section#controle.controle{
         width: 100%;
-        display: flex;
+        display: flex !important;
         flex-direction: column-reverse;
         align-content: center;
         /* */
