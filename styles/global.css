@@ -53,3 +53,12 @@
 body{
     max-width: 85rem;
 }
+
+.none{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+

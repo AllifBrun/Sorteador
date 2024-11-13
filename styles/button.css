@@ -1,6 +1,6 @@
 form {
 
-    button {
+    button, #novamente {
         position: relative;
         margin-top: 2.5rem;
 
@@ -25,7 +25,7 @@ form {
 
     }
 
-    button::before {
+    button::before, #novamente::before {
         content: "";
         border-radius: .5rem;
         width: 320px;
@@ -57,6 +57,70 @@ form {
 
 
 }
+
+
+
+#novamente {
+    position: relative;
+    margin-top: 4rem;
+    
+    display: none;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+
+    width: 318px;
+    height: 56px;
+
+    background-color: var(--background-tertiary);
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-radius: .5rem;
+
+    font: var(--label-md);
+    color: white;
+
+ & svg:nth-child(1){
+    position: absolute;
+     right: 9.125rem;
+ }
+
+ & svg:nth-child(1){
+    position: absolute;
+     right: 8,703125rem;
+ }
+
+}
+
+#novamente::before {
+    
+    content: "";
+    border-radius: .5rem;
+    width: 320px;
+    height: 58px;
+
+    background: linear-gradient(90deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+    position: absolute;
+    z-index: -1;
+    top: -1px;
+    left: -1px;
+    opacity: 0;
+
+}
+
+
+#novamente:hover{
+    &::before {
+        opacity: 1;
+        animation: border 1s ease infinite;
+    }
+
+    & svg:nth-child(2){
+        animation: girar 1s linear forwards;
+    }
+}
+
 
 @keyframes botao {
     50% {
@@ -91,7 +155,11 @@ form {
     }
 }
 
-
+@keyframes girar {
+    100%{
+        transform: rotate(360deg);
+    }
+}
 
 
 @media (width >=80rem) {
@@ -110,4 +178,21 @@ form {
             height: 58px;
         }
     }
+
+
+
+    #novamente {
+        width: 482px;
+    }
+
+
+    #novamente::before {
+        content: "";
+        border-radius: .5rem;
+        width: 484px;
+        height: 58px;
+    }
+
+
 }
+

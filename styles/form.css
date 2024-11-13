@@ -101,6 +101,10 @@ main {
 
                 }
 
+                .segundo::placeholder{
+                    padding-left: 1.6rem;
+                }
+
 
 
 
